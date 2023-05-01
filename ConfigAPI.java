@@ -1,15 +1,10 @@
-package originvips.Managers.APIs;
 
 import com.sun.org.apache.xerces.internal.xs.StringList;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.inventory.ItemStack;
-import originvips.Main;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.UUID;
 
 public class ConfigAPI {
 
@@ -72,15 +67,20 @@ public class ConfigAPI {
 
     public static class Infos {
         private String string;
+        private StringList stringlist;
         private Double number_double;
         private Integer number_int;
         private Float number_float;
-        private StringList stringlist;
+        private Long number_long;
+        private Boolean boolean_data;
 
 
 
         public Infos(String string){
             this.string = string;
+        }
+        public Infos(StringList stringlist){
+            this.stringlist = stringlist;
         }
         public Infos(Double number_double){
             this.number_double = number_double;
@@ -91,8 +91,11 @@ public class ConfigAPI {
         public Infos(Float number_float){
             this.number_float = number_float;
         }
-        public Infos(StringList stringlist){
-            this.stringlist = stringlist;
+        public Infos(Long number_long){
+            this.number_long = number_long;
+        }
+        public Infos(Boolean boolean_data){
+            this.boolean_data = boolean_data;
         }
 
 
@@ -135,6 +138,22 @@ public class ConfigAPI {
 
         public void setNumber_float(Float number_float) {
             this.number_float = number_float;
+        }
+
+        public Long getNumber_long() {
+            return number_long;
+        }
+
+        public void setNumber_long(Long number_long) {
+            this.number_long = number_long;
+        }
+
+        public Boolean getBoolean_data() {
+            return boolean_data;
+        }
+
+        public void setBoolean_data(Boolean boolean_data) {
+            this.boolean_data = boolean_data;
         }
     }
 
