@@ -18,6 +18,8 @@ These are the natively supported data types:
 * Integer
 * Double
 * Float
+* Long
+* Boolean
 
 But if you need to use another type of data, you can easily add it to our API and adapt it for whatever use you need.
 
