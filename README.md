@@ -12,6 +12,15 @@ public static void loadConfig() {
 }
 ```
 
+These are the natively supported data types:
+* String
+* String List
+* Integer
+* Double
+* Float
+
+But if you need to use another type of data, you can easily add it to our API and adapt it for whatever use you need.
+
 To add information in the API just use:
 ```Java
 // ARGUMENT 1 = Path to the information in the YAML file
